@@ -98,7 +98,19 @@ export default defineNitroPlugin((nitroApp) => {
         stocks: currentStocks
       });
 
-      durable.publish('stocks', payload);
+      // Broadcast directly to all active WebSockets on this Durable Object
+      try {
+        const sockets = durable.ctx?.getWebSockets ? durable.ctx.getWebSockets() : [];
+        for (const ws of sockets) {
+          try {
+            ws.send(payload);
+          } catch (e) {}
+        }
+      } catch (e) {}
+
+      try {
+        durable.publish('stocks', payload);
+      } catch (e) {}
     } catch (alarmErr) {
       console.error('[DO Alarm Error]', alarmErr);
     } finally {
