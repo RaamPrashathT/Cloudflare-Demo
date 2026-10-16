@@ -46,7 +46,7 @@ A real-time financial stock tracker demonstrating that **Cloudflare Durable Obje
 The project targets your specific Cloudflare D1 database:
 - **Database Name**: `demo`
 - **Database UUID**: `55efcb6d-1bae-4f73-aa6d-6aa48abdb58f`
-- **Binding Name**: `DB` (configured in `wrangler.toml`)
+- **Binding Name**: `DB` (configured in `wrangler.json`)
 - **Durable Object Binding**: `$DurableObject`
 
 ---
@@ -147,6 +147,7 @@ npx wrangler deploy
 ¦   +-- 0001_init.sql        # Migration copy of schema.sql
 +-- next.config.mjs          # Next.js configuration (static export)
 +-- nitro.config.ts          # Nitro config (preset: cloudflare-durable, websockets: true)
-+-- wrangler.toml            # Cloudflare Worker, Durable Objects & D1 bindings
++-- wrangler.json            # Cloudflare Worker, Durable Objects & D1 bindings
 +-- package.json             # Build and deployment scripts
 ```
+
