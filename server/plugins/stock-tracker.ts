@@ -2,7 +2,7 @@ import { defineNitroPlugin } from 'nitropack/runtime';
 
 // Fallback initial stock data for safety and simulation
 const INITIAL_STOCKS = [
-  { symbol: 'NETF', name: 'Cloudflare Inc.', price: 92.40, change: 1.25, change_percent: 1.37, day_high: 94.10, day_low: 90.80, volume: 4210000, category: 'Cloud & Edge' },
+  { symbol: 'NET', name: 'Cloudflare Inc.', price: 92.40, change: 1.25, change_percent: 1.37, day_high: 94.10, day_low: 90.80, volume: 4210000, category: 'Cloud & Edge' },
   { symbol: 'AAPL', name: 'Apple Inc.', price: 232.15, change: -0.85, change_percent: -0.36, day_high: 234.50, day_low: 230.90, volume: 48200000, category: 'Consumer Tech' },
   { symbol: 'GOOGL', name: 'Alphabet Inc.', price: 186.50, change: 2.10, change_percent: 1.14, day_high: 187.80, day_low: 184.20, volume: 21500000, category: 'Search & AI' },
   { symbol: 'MSFT', name: 'Microsoft Corp.', price: 428.30, change: -1.40, change_percent: -0.33, day_high: 431.20, day_low: 426.50, volume: 18900000, category: 'Cloud & Enterprise' },
